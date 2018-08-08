@@ -264,6 +264,8 @@ class MonthView extends React.Component {
     let overlay = (this.state && this.state.overlay) || {}
     let { components } = this.props
 
+    let PopupComponent = components.popup || Popup
+
     return (
       <Overlay
         rootClose
@@ -272,7 +274,7 @@ class MonthView extends React.Component {
         show={!!overlay.position}
         onHide={() => this.setState({ overlay: null })}
       >
-        <Popup
+        <PopupComponent
           {...this.props}
           eventComponent={components.event}
           eventWrapperComponent={components.eventWrapper}
