@@ -264,7 +264,7 @@ class MonthView extends React.Component {
     let overlay = (this.state && this.state.overlay) || {}
     let { components } = this.props
 
-    let PopupComponent = components.popup || Popup
+    const PopupComponent = components.popup || Popup
 
     return (
       <Overlay
